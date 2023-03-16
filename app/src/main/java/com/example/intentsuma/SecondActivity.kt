@@ -20,7 +20,6 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        //var recibido:Boolean = false
 
         var numeroUno = findViewById<TextView>(R.id.numeroUno)
         var numeroDos = findViewById<TextView>(R.id.numeroDos)
@@ -38,8 +37,8 @@ class SecondActivity : AppCompatActivity() {
         enviarResultado.setOnClickListener(){
             var main = MainActivity()
             if(resultadoObtenido == true) {
-                val intent = getIntent()
-                intent.putExtra("Resultado", resultado.text) //Enviamos al MainActivity la cadena del TextView "resultado" asignándole a dicha cadena el id "Resultado"
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("Resultado", resultado.text.toString()) //Enviamos al MainActivity la cadena del TextView "resultado" asignándole a dicha cadena el id "Resultado"
                 setResult(Activity.RESULT_OK, intent);
 
                 main.recibirResultado() //Avisamos a MainActivity de que ya le hemos enviado el Resultado de la suma
@@ -68,8 +67,8 @@ class SecondActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        val numeroUno = findViewById<TextView>(R.id.numero1)
-        val numeroDos = findViewById<TextView>(R.id.numero2)
+        var numeroUno = findViewById<TextView>(R.id.numero1)
+        var numeroDos = findViewById<TextView>(R.id.numero2)
         if(resultCode != Activity.RESULT_OK) return
         when(requestCode) {
             NUMERO_UNO -> {
@@ -77,7 +76,9 @@ class SecondActivity : AppCompatActivity() {
                     numeroUno.text = data.getStringExtra("PrimerNumero")
                 }; }
             // Other result codes
-            else -> {}
+            else -> {
+                Toast.makeText(this@SecondActivity, "Lo sentimos, el primer número no ha sido enviado", Toast.LENGTH_SHORT).show()
+            }
         }
         when(requestCode) {
             NUMERO_DOS -> {
@@ -85,7 +86,9 @@ class SecondActivity : AppCompatActivity() {
                     numeroDos.text = data.getStringExtra("SegundoNumero")
                 }; }
             // Other result codes
-            else -> {}
+            else -> {
+                Toast.makeText(this@SecondActivity, "Lo sentimos, el segundo número no ha sido enviado.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

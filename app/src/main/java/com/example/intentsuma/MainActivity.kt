@@ -27,14 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         enviarDatos.setOnClickListener(){
             val second = SecondActivity()
-            val intent = getIntent()
+            val intent = Intent(this, SecondActivity::class.java)
+4
+            var numeroUno: EditText = findViewById<EditText>(R.id.numeroUno)
+            var numeroDos: EditText = findViewById<EditText>(R.id.numeroDos)
 
-            var numeroUno = findViewById<EditText>(R.id.numeroUno)
-            var numeroDos = findViewById<EditText>(R.id.numeroDos)
-
-
-            intent.putExtra("PrimerNumero", numeroUno.text) //Enviamos al SecondActivity la cadena del TextView "numeroUno" asignándole a dicha cadena el id "PrimerNumero"
-            intent.putExtra("SegundoNumero", numeroDos.text) //Enviamos al SecondActivity la cadena del TextView "numeroDos" asignándole a dicha cadena el id "SegundoNumero"
+            intent.putExtra("PrimerNumero", numeroUno.text.toString()) //Enviamos al SecondActivity la cadena del TextView "numeroUno" asignándole a dicha cadena el id "PrimerNumero"
+            intent.putExtra("SegundoNumero", numeroDos.text.toString()) //Enviamos al SecondActivity la cadena del TextView "numeroDos" asignándole a dicha cadena el id "SegundoNumero"
             setResult(Activity.RESULT_OK, intent);
 
             second.datosRecibidos() //Avisamos a SecondActivity de que ya le hemos enviado los datos
