@@ -77,7 +77,7 @@ class SecondActivity : AppCompatActivity() {
                 }; }
             // Other result codes
             else -> {
-                Toast.makeText(this@SecondActivity, "Lo sentimos, el primer número no ha sido enviado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SecondActivity, "Lo sentimos, el primer número no ha sido recibido", Toast.LENGTH_SHORT).show()
             }
         }
         when(requestCode) {
@@ -87,7 +87,7 @@ class SecondActivity : AppCompatActivity() {
                 }; }
             // Other result codes
             else -> {
-                Toast.makeText(this@SecondActivity, "Lo sentimos, el segundo número no ha sido enviado.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SecondActivity, "Lo sentimos, el segundo número no ha sido recibido.", Toast.LENGTH_SHORT).show()
             }
         }
     }
