@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             val second = SecondActivity()
             val intent = getIntent()
 
-            var numeroUno = findViewById<TextView>(R.id.numeroUno)
-            var numeroDos = findViewById<TextView>(R.id.numeroDos)
+            var numeroUno = findViewById<EditText>(R.id.numeroUno)
+            var numeroDos = findViewById<EditText>(R.id.numeroDos)
 
 
             intent.putExtra("PrimerNumero", numeroUno.text) //Enviamos al SecondActivity la cadena del TextView "numeroUno" asignándole a dicha cadena el id "PrimerNumero"

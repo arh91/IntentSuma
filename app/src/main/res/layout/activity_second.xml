@@ -10,20 +10,22 @@
         android:id="@+id/anterior_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="89dp"
+        android:layout_marginTop="40dp"
         android:text="ANTERIOR"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enviarResultado_Btn" />
 
     <TextView
         android:id="@+id/numero1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="38dp"
         android:text="Numero 1"
         app:layout_constraintBaseline_toBaselineOf="@+id/mas"
-        app:layout_constraintEnd_toStartOf="@+id/mas" />
+        app:layout_constraintEnd_toEndOf="@+id/mas"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/mas"
@@ -57,7 +59,7 @@
         android:id="@+id/resultadoSuma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="62dp"
         android:text="Resultado"
         app:layout_constraintBaseline_toBaselineOf="@+id/igual"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -66,7 +68,9 @@
         android:id="@+id/enviarResultado_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="177dp"
         android:text="ENVIAR RESULTADO"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="506dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/anterior_Btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
