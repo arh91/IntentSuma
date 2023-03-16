@@ -7,11 +7,13 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/numeroDos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Número 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -19,32 +21,56 @@
         android:id="@+id/siguiente_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="37dp"
         android:text="SIGUIENTE"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="594dp" />
+        app:layout_constraintStart_toEndOf="@+id/foto_Btn"
+        app:layout_constraintTop_toBottomOf="@+id/foto_Btn" />
 
     <Button
         android:id="@+id/foto_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="174dp"
         android:text="HACER FOTO"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="509dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/envioDatos_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="44dp"
         android:text="ENVIAR DATOS"
-        tools:layout_editor_absoluteX="273dp"
-        tools:layout_editor_absoluteY="502dp" />
+        app:layout_constraintBottom_toTopOf="@+id/siguiente_Btn"
+        app:layout_constraintStart_toEndOf="@+id/siguiente_Btn" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="78dp" />
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="78dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/numeroUno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número 1"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="411dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

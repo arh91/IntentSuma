@@ -10,7 +10,63 @@
         android:id="@+id/anterior_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
         android:text="ANTERIOR"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="594dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="Numero 1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mas"
+        app:layout_constraintEnd_toStartOf="@+id/mas" />
+
+    <TextView
+        android:id="@+id/mas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/numero2"
+        app:layout_constraintEnd_toStartOf="@+id/numero2" />
+
+    <TextView
+        android:id="@+id/numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="Numero 2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/igual"
+        app:layout_constraintEnd_toStartOf="@+id/igual" />
+
+    <TextView
+        android:id="@+id/igual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="22dp"
+        android:text="="
+        app:layout_constraintEnd_toStartOf="@+id/resultadoSuma"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultadoSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="Resultado"
+        app:layout_constraintBaseline_toBaselineOf="@+id/igual"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/enviarResultado_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENVIAR RESULTADO"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="506dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
